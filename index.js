@@ -30,7 +30,7 @@ db.connect((err) => {
 });
 
 app.get('/api/mahasiswa', (req, res) => {
-    db.query('SELECT * from mahasiswa', (err, result) => {
+    db.query('SELECT * from biodata', (err, result) => {
         if (err) {
             console.error('Error executing query:' + err.stack);
             res.status(500).send('Error fetching users');
