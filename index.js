@@ -64,7 +64,7 @@ app.put('/api/mahasiswa/:id', (req, res) => {
     const userId = req.params.id;
     const { nama, alamat, agama } = req.body;
     db.query(
-        "UPDATE biodata SET nama = ?, alamat = ?, agama = ? WHERE = id = ?",
+        "UPDATE biodata SET nama = ?, alamat = ?, agama = ? WHERE id = ?",
         [nama, alamat, agama, userId],
         (err, results) => {
             if (err) {
